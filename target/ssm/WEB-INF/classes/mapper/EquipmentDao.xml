@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.EquipmentDao">
+    <cache/>
+    <select id="queryById" parameterType="int" resultMap="equipment-map">
+        SELECT
+            <include refid="equip-list"></include>
+        FROM EQUIPMENT
+        WHERE id = #{id}
+    </select>
+
+    <resultMap id="equipment-map" type="Equipment">
+        <id column="id" property="id"/>
+        <result column="equiname" property="equiName"/>
+        <result column="equiClass" property="equiClass"/>
+        <result column="equiNum" property="equiNum"/>
+        <result column="equiCommpany" property="equiCompany"/>
+        <result column="twoUse" property="twoUse"/>
+        <result column="endDate" property="endDate"/>
+        <result column="remark" property="remark"/>
+        <association property="description" select="queryDescription" column="equiClass">
+
+        </association>
+    </resultMap>
+    <select id="queryDescription" resultType="Description" parameterType="int">
+        SELECT descid,descname,remark
+        FROM DESCRIPTION
+        WHERE descid = #{equiClass}
+    </select>
+
+    <select id="findCount" resultType="int">
+        SELECT count(*)
+        FROM equipment
+    </select>
+
+    <select id="queryByPage" parameterType="int" resultMap="equipment-map">
+        SELECT
+            <include refid="equip-list"></include>
+        FROM EQUIPMENT
+        ORDER BY id
+        LIMIT #{first},#{offerSet}
+    </select>
+
+    <insert id="add" parameterType="Equipment" useGeneratedKeys="true" keyProperty="id">
+        INSERT into equipment
+            (equiName,equiClass,equiNum,equiCommpany,twoUse,endDate,remark)
+        values
+            (#{equiName},#{equiClass},#{equiNum},#{equiCompany},#{twoUse},#{endDate},#{remark})
+    </insert>
+
+    <update id="update" keyProperty="id" parameterType="Equipment" >
+        UPDATE equipment
+        <set>
+            <if test="equiName != null">equiName = #{equiName} ,</if>
+            <if test="equiClass != null">equiClass = #{equiClass}, </if>
+            <if test="equiNum != null">equiNum =#{equiNum}, </if>
+            <if test="equiCompany != null">equiCommpany = #{equiCompany}, </if>
+            <if test="twoUse != null">twoUse = #{twoUse}, </if>
+            <if test="endDate != null">endDate = #{endDate} ,</if>
+            <if test="remark != null">remark = #{remark} </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+    <update id="lendequi" parameterType="Equipment">
+        update equipment
+        <set>
+            <if test="equiNum != null">equiNum =equiNum-#{equiNum}</if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <update id="backEquip" keyProperty="id" parameterType="int">
+        UPDATE equipment
+        <set>
+            <if test="equiNum != null">equiNum = equiNum+#{equiNum}</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <update id="updateList" parameterType="list">
+        UPDATE equipment
+        <trim prefix="set" prefixOverrides=",">
+            <trim prefix="equiNum = case" suffix="end">
+                <foreach collection="list" item="equi" index="index">
+                    <if test="equi.equiNum != null">
+                        when id = #{equi.id} then equiNum-#{equi.equiNum}
+                    </if>
+                </foreach>
+            </trim>
+        </trim>
+        where id in
+        <foreach collection="list" index="index" item="i" separator="," open="(" close=")">
+            #{i.id}
+        </foreach>
+
+    </update>
+
+    <delete id="delete" parameterType="int">
+        DELETE
+        FROM equipment
+        WHERE id = #{id}
+    </delete>
+
+    <sql id="equip-list">
+        id,
+        equiName,
+        equiClass,
+        equiNum,
+        equiCommpany,
+        twoUse,
+        endDate,
+        remark
+    </sql>
+
+    <select id="queryAll" resultMap="equipment-map">
+        SELECT <include refid="equip-list"/>
+        from equipment
+    </select>
+</mapper>

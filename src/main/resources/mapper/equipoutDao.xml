@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.equipoutDao">
+    <cache/>
+    <resultMap id="equipMap" type="equipout">
+        <id property="id" column="id"/>
+        <result property="equipId" column="equipid"/>
+        <result property="equipName" column="equip_name"/>
+        <result property="equipOutNum" column="equip_out_num"/>
+        <result property="outDate" column="out_date"/>
+        <result property="userName" column="user"/>
+        <result property="tag" column="tag"/>
+    </resultMap>
+
+    <select id="queryByuser" resultMap="equipMap" parameterType="string">
+        select id,equipid,equip_name,equip_out_num,out_date,user,tag
+        from equipout t
+        where t.user = #{username}
+        order by out_date
+    </select>
+
+    <insert id="insert" parameterType="equipout" useGeneratedKeys="true" keyProperty="id">
+        insert into equipout
+          (equipid,equip_name,equip_out_num,out_date,user,tag)
+        values (#{equipId},#{equipName},#{equipOutNum},#{outDate},#{userName},#{tag})
+    </insert>
+
+    <insert id="insertList" parameterType="list" keyProperty="id" useGeneratedKeys="true">
+        insert into equipout
+        (equipid,equip_name,equip_out_num,out_date,user,tag)
+        values
+        <foreach collection="list"  item="elog" separator=",">
+            (#{elog.equipId},#{elog.equipName},#{elog.equipOutNum},#{elog.outDate},#{elog.userName},#{tag})
+        </foreach>
+
+    </insert>
+    <update id="backEqui" parameterType="int">
+        update equipout
+        set tag = 0
+        where id = #{id}
+    </update>
+</mapper>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/../WebCollector-master_2/WebCollector-master" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bookstore-master" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../production_ssm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springDemo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/chapter-1-spring-boot-quickstart" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/chapter-2-spring-boot-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/chapter-3-spring-boot-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/chapter-4-spring-boot-validating-form-input" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/chapter-4-spring-boot-web-thymeleaf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/chapter-5-spring-boot-data-jpa" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/chapter-5-spring-boot-paging-sorting" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/spring-data-elasticsearch-crud" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/spring-data-elasticsearch-query" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-configuration" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-dubbo-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-dubbo-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-elasticsearch" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-freemarker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-hbase" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-mybatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-mybatis-annotation" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-mybatis-mutil-datasource" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-mybatis-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-mybatis-redis-annotation" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-restful" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-validation-over-json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-webflux-1-quickstart" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-webflux-10-book-manage-sys" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-webflux-2-restful" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-webflux-3-mongodb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-webflux-4-thymeleaf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-webflux-5-thymeleaf-mongodb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-webflux-6-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-webflux-7-redis-cache" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-webflux-8-websocket" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot-learning-example/springboot-webflux-9-test" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
