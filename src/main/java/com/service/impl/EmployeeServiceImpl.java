@@ -50,7 +50,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public int add(Employee employee) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd") ; //使用了默认的格式创建了一个日期格式化对象。
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd") ;
         String time = dateFormat.format(employee.getBirthday());
         employee.setEno(time+String.valueOf((int)((Math.random()+1)*100)) );
         employee.setUser_type(0);

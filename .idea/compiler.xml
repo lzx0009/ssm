@@ -6,87 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springDemo" />
+        <module name="HelloWorld" />
         <module name="ssm" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="bookstore" target="1.7" />
-      <module name="chapter-1-spring-boot-quickstart" target="1.8" />
-      <module name="chapter-2-spring-boot-config" target="1.8" />
-      <module name="chapter-3-spring-boot-web" target="1.8" />
-      <module name="chapter-4-spring-boot-validating-form-input" target="1.8" />
-      <module name="chapter-4-spring-boot-web-thymeleaf" target="1.8" />
-      <module name="chapter-5-spring-boot-data-jpa" target="1.8" />
-      <module name="chapter-5-spring-boot-paging-sorting" target="1.8" />
-      <module name="maven-archiver (1)" target="1.5" />
-      <module name="maven-archiver (2)" target="1.5" />
-      <module name="maven-archiver (3)" target="1.5" />
-      <module name="maven-archiver (4)" target="1.5" />
-      <module name="maven02" target="1.8" />
-      <module name="production_ssm" target="1.7" />
-      <module name="spring-data-elasticsearch-crud" target="1.6" />
-      <module name="spring-data-elasticsearch-query" target="1.6" />
-      <module name="springboot" target="1.5" />
-      <module name="springboot-configuration" target="1.8" />
-      <module name="springboot-dubbo-client" target="1.8" />
-      <module name="springboot-dubbo-server" target="1.8" />
-      <module name="springboot-elasticsearch" target="1.6" />
-      <module name="springboot-freemarker" target="1.8" />
-      <module name="springboot-hbase" target="1.6" />
-      <module name="springboot-mybatis" target="1.8" />
-      <module name="springboot-mybatis-annotation" target="1.8" />
-      <module name="springboot-mybatis-mutil-datasource" target="1.8" />
-      <module name="springboot-mybatis-redis" target="1.8" />
-      <module name="springboot-mybatis-redis-annotation" target="1.8" />
-      <module name="springboot-properties" target="1.8" />
-      <module name="springboot-restful" target="1.8" />
-      <module name="springboot-validation-over-json" target="1.8" />
-      <module name="springboot-webflux-1-quickstart" target="1.8" />
-      <module name="springboot-webflux-10-book-manage-sys" target="1.8" />
-      <module name="springboot-webflux-2-restful" target="1.8" />
-      <module name="springboot-webflux-3-mongodb" target="1.8" />
-      <module name="springboot-webflux-4-thymeleaf" target="1.8" />
-      <module name="springboot-webflux-5-thymeleaf-mongodb" target="1.8" />
-      <module name="springboot-webflux-6-redis" target="1.8" />
-      <module name="springboot-webflux-7-redis-cache" target="1.8" />
-      <module name="springboot-webflux-8-websocket" target="1.8" />
-      <module name="springboot-webflux-9-test" target="1.8" />
-      <module name="WebCollector" target="1.6" />
-    </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="chapter-1-spring-boot-quickstart" options="-parameters" />
-      <module name="chapter-2-spring-boot-config" options="-parameters" />
-      <module name="chapter-3-spring-boot-web" options="-parameters" />
-      <module name="chapter-4-spring-boot-validating-form-input" options="-parameters" />
-      <module name="chapter-4-spring-boot-web-thymeleaf" options="-parameters" />
-      <module name="chapter-5-spring-boot-data-jpa" options="-parameters" />
-      <module name="chapter-5-spring-boot-paging-sorting" options="-parameters" />
-      <module name="springDemo" options="-parameters" />
-      <module name="springboot-configuration" options="-parameters" />
-      <module name="springboot-dubbo-client" options="-parameters" />
-      <module name="springboot-dubbo-server" options="-parameters" />
-      <module name="springboot-freemarker" options="-parameters" />
-      <module name="springboot-mybatis" options="-parameters" />
-      <module name="springboot-mybatis-annotation" options="-parameters" />
-      <module name="springboot-mybatis-mutil-datasource" options="-parameters" />
-      <module name="springboot-mybatis-redis" options="-parameters" />
-      <module name="springboot-mybatis-redis-annotation" options="-parameters" />
-      <module name="springboot-properties" options="-parameters" />
-      <module name="springboot-restful" options="-parameters" />
-      <module name="springboot-validation-over-json" options="-parameters" />
-      <module name="springboot-webflux-1-quickstart" options="-parameters" />
-      <module name="springboot-webflux-10-book-manage-sys" options="-parameters" />
-      <module name="springboot-webflux-2-restful" options="-parameters" />
-      <module name="springboot-webflux-3-mongodb" options="-parameters" />
-      <module name="springboot-webflux-4-thymeleaf" options="-parameters" />
-      <module name="springboot-webflux-5-thymeleaf-mongodb" options="-parameters" />
-      <module name="springboot-webflux-6-redis" options="-parameters" />
-      <module name="springboot-webflux-7-redis-cache" options="-parameters" />
-      <module name="springboot-webflux-8-websocket" options="-parameters" />
-      <module name="springboot-webflux-9-test" options="-parameters" />
-    </option>
   </component>
 </project>

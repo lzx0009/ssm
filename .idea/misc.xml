@@ -2,54 +2,18 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/../bookstore-master" />
-    <file type="web" url="file://$PROJECT_DIR$/../production_ssm" />
+    <file type="web" url="file://$PROJECT_DIR$/../springboot/SpringDataJpaCrud" />
     <file type="web" url="file://$PROJECT_DIR$" />
-    <file type="web" url="file://$PROJECT_DIR$/../SSM-master" />
-  </component>
-  <component name="JavaScriptSettings">
-    <option name="languageLevel" value="ES6" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/../springDemo/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../springboot/SpringDataJpaCrud/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/../springboot-learning-example/chapter-1-spring-boot-quickstart/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/chapter-2-spring-boot-config/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/chapter-3-spring-boot-web/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/chapter-4-spring-boot-validating-form-input/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/chapter-4-spring-boot-web-thymeleaf/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/chapter-5-spring-boot-data-jpa/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/chapter-5-spring-boot-paging-sorting/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/spring-data-elasticsearch-crud/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/spring-data-elasticsearch-query/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-configuration/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-dubbo-client/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-dubbo-server/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-elasticsearch/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-freemarker/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-hbase/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-mybatis-annotation/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-mybatis-mutil-datasource/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-mybatis-redis-annotation/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-mybatis-redis/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-mybatis/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-properties/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-restful/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-validation-over-json/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-webflux-1-quickstart/pom.xml" />
-        <option value="$PROJECT_DIR$/../springboot-learning-example/springboot-webflux-2-restful/pom.xml" />
-      </set>
-    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

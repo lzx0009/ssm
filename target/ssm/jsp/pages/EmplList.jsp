@@ -67,6 +67,7 @@
                     </c:forEach>
                     </tbody>
                 </table>
+                <c:out value="${model}"/>
                 <ul class="pagination pagination-sm">
                     <li>
                     <span>

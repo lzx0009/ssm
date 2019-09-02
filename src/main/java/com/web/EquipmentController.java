@@ -38,6 +38,12 @@ public class EquipmentController {
 //        this.currPage = currPage;
 //    }
 
+    /**
+     * 分页查询物资
+     * @param session
+     * @param currPage
+     * @return
+     */
     @RequestMapping("equipList")
     public String list(HttpSession session,Integer currPage){
         //分页查询
@@ -48,6 +54,12 @@ public class EquipmentController {
         return "pages/EquiList";
     }
 
+    /**
+     * 查询单条物资
+     * @param session
+     * @param id
+     * @return
+     */
     @RequestMapping("queryById")
     @ResponseBody
     public Result queryById(HttpSession session,int id){
@@ -63,6 +75,11 @@ public class EquipmentController {
         return rs;
     }
 
+    /**
+     * 物资新增提供页面数据
+     * @param session
+     * @return
+     */
     @RequestMapping("toInsert")
     public String toInsert(HttpSession session){
         List<Description> list = descriptionService.findAll();
@@ -71,7 +88,11 @@ public class EquipmentController {
         return "pages/EquiAdd";
     }
 
-
+    /**
+     * 物资种类列表
+     * @param model
+     * @return
+     */
     @RequestMapping("/descList")
     public String descList(Model model){
         List<Description> list = descriptionService.findAll();
@@ -79,6 +100,11 @@ public class EquipmentController {
         return "pages/DescList";
     }
 
+    /**
+     * 物资新增
+     * @param equipment
+     * @return
+     */
     @RequestMapping("insertEqui")
     @ResponseBody
     public Result insertEqui(Equipment equipment){
@@ -92,6 +118,12 @@ public class EquipmentController {
         return result;
     }
 
+    /**
+     * 根据用户名查询用户领取记录
+     * @param session
+     * @param username
+     * @return
+     */
     @RequestMapping("loglist")
     public String equipLog(HttpSession session,String username){
         System.out.println("查询"+username+"的领取记录");
@@ -100,6 +132,13 @@ public class EquipmentController {
         return "pages/logList";
     }
 
+    /**
+     * 用户物资归还
+     * @param id
+     * @param equipId
+     * @param equipNum
+     * @return
+     */
     @RequestMapping("backEquip")
     @ResponseBody
     public Result backEquip(int id,int equipId,int equipNum){
@@ -115,12 +154,24 @@ public class EquipmentController {
         return rs;
     }
 
+    /**
+     * 物资种类新增
+     * @param model
+     * @param description
+     * @return
+     */
     @RequestMapping("/descSave")
     public String saveDesc(Model model,Description description){
         descriptionService.add(description);
         return descList(model);
     }
 
+    /**
+     * 物资删除
+     * @param id
+     * @param session
+     * @return
+     */
     @RequestMapping("deleteEquip")
     public String delete(@RequestParam("id") int id, HttpSession session){
         equipmentService.delete(id);
@@ -129,6 +180,12 @@ public class EquipmentController {
         return "pages/EquiList";
     }
 
+    /**
+     * 物资种类删除
+     * @param descid
+     * @param model
+     * @return
+     */
     @RequestMapping("deleteDesc")
     public String deletedesc(@RequestParam("descid") int descid, Model model){
         descriptionService.delete(descid);
@@ -137,6 +194,12 @@ public class EquipmentController {
         return "pages/DescList";
     }
 
+    /**
+     * 物资信息更新
+     * @param session
+     * @param equipment
+     * @return
+     */
     @RequestMapping("/Equiupdate")
     public String saveEqui(HttpSession session,Equipment equipment){
         equipmentService.update(equipment);

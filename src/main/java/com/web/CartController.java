@@ -92,7 +92,12 @@ public class CartController {
         return new ModelAndView("redirect:equipList?currPage=1");
     }
 
-
+    /**
+     * 移除购物车内物资
+     * @param id
+     * @param session
+     * @return
+     */
     @RequestMapping("/removeGoodsFromCart")
     public ModelAndView removeGoodsFromCart(Integer id, HttpSession session) {
         Equipment book = equipmentService.queryById(id);
@@ -102,6 +107,11 @@ public class CartController {
         return new ModelAndView("redirect:/Equipment/cartPage");
     }
 
+    /**
+     * 清空购物车
+     * @param session
+     * @return
+     */
     @RequestMapping("/cleanCart")
     public String cleanCart(HttpSession session) {
         Cart cart = null;
@@ -109,6 +119,11 @@ public class CartController {
         return "Equipment/cartPage";
     }
 
+    /**
+     * 检查库存
+     * @param session
+     * @return
+     */
     @ResponseBody
     @RequestMapping(value = "/checkStore", produces = {"text/html;charset=UTF-8;", "application/json;"})
     public String checkStore(HttpSession session) {
@@ -119,12 +134,7 @@ public class CartController {
             Map.Entry<Equipment, Integer> entry = iter.next();
             Equipment book = entry.getKey();
             Integer number = entry.getValue();
-//            if (!equipmentService.checkStore(book.getId(),number)){
-//                return "《"+book.getEquiName()+"》库存不足,库存剩余:"+book.getEquiNum();
-//            }
         }
         return "success";
     }
 }
-
-

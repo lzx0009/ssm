@@ -27,6 +27,12 @@ public class EmployeeController {
     @Autowired
     private DepartmentService departmentService;
 
+    /**
+     * 登录验证
+     * @param session
+     * @param employee
+     * @return
+     */
     @RequestMapping("/login")
     @ResponseBody
     public Result login(HttpSession session, Employee employee){
@@ -54,15 +60,27 @@ public class EmployeeController {
         return "pages/login";
     }
 
-
+    /**
+     * 获取用户列表
+     * @param model
+     * @param session
+     * @param currPage
+     * @return
+     */
     @RequestMapping("/emplList")
-    public String list(HttpSession session,Integer currPage){
+    public String list(Model model,HttpSession session,Integer currPage){
         PageBean pageBean = employeeService.queryByPage(currPage);
         session.setAttribute("emplList", pageBean);
+        model.addAttribute("model", "testtesttesttest");
 //        logger.debug("用户列表："+pageBean.getList().get(1).toString());
         return "pages/EmplList";
     }
 
+    /**
+     * 获取全部物资
+     * @param session
+     * @return
+     */
     @RequestMapping("/depaList")
     public String depalist(HttpSession session){
 
@@ -72,6 +90,12 @@ public class EmployeeController {
         return "pages/DepaList";
     }
 
+    /**
+     * 用户信息修改
+     * @param employee
+     * @param session
+     * @return
+     */
     @RequestMapping("emplEdit")
     public String toedit(Employee employee,HttpSession session){
         System.out.println("页面保存："+employee.toString());
@@ -87,6 +111,11 @@ public class EmployeeController {
         return "redirect:jsp/pages/EmplEdit.jsp";
     }
 
+    /**
+     * 新用户注册
+     * @param employee
+     * @return
+     */
     @RequestMapping("add")
     @ResponseBody
     public Result add(Employee employee){
@@ -101,6 +130,11 @@ public class EmployeeController {
         return result;
     }
 
+    /**
+     * 删除用户
+     * @param eid
+     * @return
+     */
     @RequestMapping("/delete")
     @ResponseBody
     public Result delete(int eid){
@@ -117,6 +151,11 @@ public class EmployeeController {
         return result;
     }
 
+    /**
+     * 查询用户黑名单
+     * @param session
+     * @return
+     */
     @RequestMapping("/queryBlack")
     public String queryBlack(HttpSession session){
         List list = employeeService.queryBlack();

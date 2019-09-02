@@ -18,7 +18,7 @@ function sub() {
             }
         },
         error:function (data) {
-            alert("error????");
+            alert("system error");
         }
     })
 }
